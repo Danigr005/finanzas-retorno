@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Volver a Finanzas</title>
+</head>
+<body>
+<p>Volviendo a la app Finanzas…</p>
+<p><a id="back" href="finanzas://callback">Pulsa aquí si no se abre sola</a></p>
+<script>
+  // Forwards only the query string (code/state/error) to the app's custom scheme. Nothing is stored or sent anywhere.
+  var target = "finanzas://callback" + window.location.search;
+  document.getElementById("back").setAttribute("href", target);
+  window.location.replace(target);
+</script>
+</body>
+</html>
